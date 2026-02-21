@@ -1,0 +1,68 @@
+/* Badge Component Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+/* Badge Sizes */
+.badge-sm {
+    padding: var(--spacing-1) var(--spacing-3);
+    font-size: var(--text-xs);
+}
+
+.badge-md {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--text-sm);
+}
+
+.badge-lg {
+    padding: var(--spacing-3) var(--spacing-5);
+    font-size: var(--text-base);
+}
+
+/* Badge Variants */
+.badge-primary {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(167, 139, 250, 0.25) 100%);
+    color: var(--color-lavender-dark);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.badge-secondary {
+    background: linear-gradient(135deg, rgba(249, 168, 212, 0.15) 0%, rgba(249, 168, 212, 0.25) 100%);
+    color: #DB2777;
+    border: 1px solid rgba(249, 168, 212, 0.3);
+}
+
+.badge-success {
+    background: linear-gradient(135deg, rgba(134, 239, 172, 0.15) 0%, rgba(134, 239, 172, 0.25) 100%);
+    color: #059669;
+    border: 1px solid rgba(134, 239, 172, 0.3);
+}
+
+.badge-warning {
+    background: linear-gradient(135deg, rgba(253, 186, 116, 0.15) 0%, rgba(253, 186, 116, 0.25) 100%);
+    color: #D97706;
+    border: 1px solid rgba(253, 186, 116, 0.3);
+}
+
+.badge-neutral {
+    background: rgba(107, 114, 128, 0.1);
+    color: var(--text-secondary);
+    border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Badge Icon */
+.badge-icon {
+    display: flex;
+    align-items: center;
+}
+
+.badge-icon svg {
+    width: 1em;
+    height: 1em;
+}

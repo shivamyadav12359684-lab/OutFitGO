@@ -1,0 +1,303 @@
+/* Outfits Page Styles */
+.outfits-page {
+    flex: 1;
+    padding: calc(80px + var(--spacing-10)) 0 var(--spacing-16);
+    background: var(--bg-cream);
+    min-height: 100vh;
+}
+
+/* Header */
+.outfits-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.outfits-title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-2);
+}
+
+.outfits-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+/* Weather Widget */
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4) var(--spacing-6);
+    background: var(--bg-card);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+}
+
+.weather-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-peach-light) 0%, var(--color-peach) 100%);
+    border-radius: var(--radius-xl);
+    color: white;
+}
+
+.weather-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-temp {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.weather-condition {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Filters */
+.outfits-filters {
+    display: flex;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-8);
+}
+
+.outfit-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-5);
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--color-gray-soft);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.outfit-filter-btn:hover {
+    border-color: var(--color-lavender-light);
+    color: var(--color-lavender-dark);
+}
+
+.outfit-filter-btn.active {
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-lavender-dark) 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--shadow-md), 0 4px 15px rgba(167, 139, 250, 0.3);
+}
+
+.outfit-filter-icon {
+    display: flex;
+}
+
+.outfit-filter-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Outfits Grid */
+.outfits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-12);
+}
+
+/* Outfit Card */
+.outfit-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.outfit-preview {
+    position: relative;
+    height: 180px;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(167, 139, 250, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outfit-items-display {
+    display: flex;
+    gap: var(--spacing-3);
+}
+
+.outfit-item-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-smooth);
+}
+
+.outfit-card:hover .outfit-item-circle {
+    transform: translateY(-5px);
+}
+
+.outfit-item-circle svg {
+    width: 28px;
+    height: 28px;
+    color: var(--text-light);
+}
+
+.outfit-save-btn {
+    position: absolute;
+    top: var(--spacing-3);
+    right: var(--spacing-3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.outfit-save-btn:hover {
+    transform: scale(1.1);
+}
+
+.outfit-save-btn.saved {
+    color: var(--color-blush);
+}
+
+.outfit-save-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.outfit-info {
+    padding: var(--spacing-5);
+}
+
+.outfit-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-3);
+}
+
+.outfit-tags {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.outfit-items-list {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-4);
+}
+
+.outfit-item-tag {
+    display: inline;
+}
+
+.outfit-view-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: 0;
+    font-size: var(--text-sm);
+    color: var(--color-lavender-dark);
+}
+
+.outfit-view-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition-base);
+}
+
+.outfit-view-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Generate Section */
+.outfits-generate {
+    text-align: center;
+    padding: var(--spacing-10) 0;
+}
+
+.outfits-generate-hint {
+    margin-top: var(--spacing-4);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .outfits-header {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+
+    .outfits-title {
+        font-size: var(--text-3xl);
+    }
+
+    .weather-widget {
+        width: 100%;
+    }
+
+    .outfits-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: var(--spacing-2);
+    }
+
+    .outfit-filter-btn {
+        flex-shrink: 0;
+    }
+
+    .outfits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .outfits-page {
+        padding-top: calc(70px + var(--spacing-6));
+    }
+
+    .outfit-preview {
+        height: 150px;
+    }
+
+    .outfit-item-circle {
+        width: 50px;
+        height: 50px;
+    }
+}

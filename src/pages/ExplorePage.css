@@ -1,0 +1,316 @@
+/* Explore Page Styles */
+.explore-page {
+    flex: 1;
+    padding: calc(80px + var(--spacing-10)) 0 var(--spacing-16);
+    background: var(--bg-cream);
+    min-height: 100vh;
+}
+
+/* Header */
+.explore-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-10);
+}
+
+.explore-title {
+    font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+}
+
+.explore-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Tabs */
+.explore-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-12);
+    padding: var(--spacing-2);
+    background: var(--bg-card);
+    border-radius: var(--radius-full);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.explore-tab {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.explore-tab:hover {
+    color: var(--color-lavender-dark);
+}
+
+.explore-tab.active {
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-blush) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+/* Sections */
+.explore-section {
+    margin-bottom: var(--spacing-16);
+}
+
+.explore-section-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-6);
+}
+
+/* Styles Grid */
+.styles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.style-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.style-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-4);
+    box-shadow: var(--shadow-sm);
+}
+
+.style-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-lavender);
+}
+
+.style-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.style-description {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.6;
+}
+
+.style-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.style-tag {
+    font-size: var(--text-xs);
+    color: var(--color-lavender-dark);
+    opacity: 0.8;
+}
+
+.style-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: 0;
+    color: var(--color-lavender-dark);
+    font-weight: 500;
+}
+
+.style-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition-base);
+}
+
+.style-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Occasions Grid */
+.occasions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-4);
+}
+
+.occasion-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4) var(--spacing-5);
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.occasion-card:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+.occasion-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(249, 168, 212, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-lavender);
+    flex-shrink: 0;
+}
+
+.occasion-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.occasion-info {
+    flex: 1;
+}
+
+.occasion-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.occasion-count {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.occasion-arrow {
+    width: 20px;
+    height: 20px;
+    color: var(--text-light);
+    transition: all var(--transition-base);
+}
+
+.occasion-card:hover .occasion-arrow {
+    color: var(--color-lavender);
+    transform: translateX(4px);
+}
+
+/* Inspiration Banner */
+.inspiration-banner {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-blush) 100%);
+    border-radius: var(--radius-3xl);
+    padding: var(--spacing-12) var(--spacing-8);
+    text-align: center;
+    overflow: hidden;
+}
+
+.inspiration-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.inspiration-title {
+    font-size: var(--text-3xl);
+    color: white;
+    margin-bottom: var(--spacing-3);
+}
+
+.inspiration-text {
+    font-size: var(--text-base);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-6);
+    line-height: 1.7;
+}
+
+.inspiration-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.inspiration-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.inspiration-orb-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -30px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.inspiration-orb-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    left: -30px;
+    animation: float 5s ease-in-out infinite reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .explore-tabs {
+        width: 100%;
+        border-radius: var(--radius-xl);
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .explore-tab {
+        flex-shrink: 0;
+    }
+
+    .styles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .occasions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inspiration-banner {
+        padding: var(--spacing-8) var(--spacing-5);
+    }
+
+    .inspiration-title {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-page {
+        padding-top: calc(70px + var(--spacing-6));
+    }
+}
